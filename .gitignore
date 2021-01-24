@@ -1,4 +1,5 @@
 .arc-env
 .deno_dir
 .DS_Store
+.vscode
 node_modules
