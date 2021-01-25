@@ -6,6 +6,7 @@ fetch-quotes
 
 @http
 get /
+get /quotes
 
 @tables
 data
