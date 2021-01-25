@@ -52,7 +52,6 @@ interface ParsedResults {
  */
 export async function handler(request: Request) {
     console.log(request);
-    console.log(CRON_TOKEN);
 
     if (!CRON_TOKEN) {
         return {
