@@ -1,7 +1,4 @@
-// import * as querystring from 'https://deno.land/std@0.84.0/node/querystring.ts';
-// import * as dotenv from 'https://deno.land/x/dotenv@v2.0.0/mod.ts';
-
-import { querystring } from '../../deps.ts';
+import { stringify } from 'https://deno.land/std@0.84.0/node/querystring.ts';
 
 const { CRON_TOKEN, FINNHUB_AUTH_TOKEN } = Deno.env.toObject();
 
@@ -177,7 +174,7 @@ function determineLevelBreaks(results: ParsedResults): LevelBreak[] {
  * @param resolution Resolution
  */
 async function fetchQuotes(symbol: string, resolution: string) {
-    const query = querystring.stringify({
+    const query = stringify({
         resolution,
         symbol,
     });
@@ -202,7 +199,7 @@ async function fetchQuotes(symbol: string, resolution: string) {
  * @param resolution Resolution
  */
 async function fetchSupportResistance(symbol: string, resolution: string) {
-    const query = querystring.stringify({
+    const query = stringify({
         resolution,
         symbol,
     });
